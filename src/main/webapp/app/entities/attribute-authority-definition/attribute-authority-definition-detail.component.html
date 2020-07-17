@@ -1,0 +1,78 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="attributeAuthorityDefinition">
+            <h2><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.detail.title">Attribute Authority Definition</span> {{ attributeAuthorityDefinition.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.code">Code</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.name">Name</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.description">Description</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.enabled">Enabled</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.enabled }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.spidLevel">Spid Level</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.spidLevel }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.attributesUrl">Attributes Url</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.attributesUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.consentRequired">Consent Required</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.consentRequired }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.consentUrl">Consent Url</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.consentUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.checkConsentUrl">Check Consent Url</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.checkConsentUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.errorRedirectUrl">Error Redirect Url</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.errorRedirectUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.spidSchemaVersion">Spid Schema Version</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.spidSchemaVersion }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.apiVersion">Api Version</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.apiVersion }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.testUrl">Test Url</span></dt>
+                <dd>
+                    <span>{{ attributeAuthorityDefinition.testUrl }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/attribute-authority-definition', attributeAuthorityDefinition.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

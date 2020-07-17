@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="attributeDefinition">
+            <h2><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.detail.title">Attribute Definition</span> {{ attributeDefinition.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.code">Code</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.name">Name</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.description">Description</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.publicAvalable">Public Avalable</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.publicAvalable }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.spidLevel">Spid Level</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.spidLevel }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.multivalue">Multivalue</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.multivalue }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.defaultValues">Default Values</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.defaultValues }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.consentRequired">Consent Required</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.consentRequired }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.aaCode">Aa Code</span></dt>
+                <dd>
+                    <span>{{ attributeDefinition.aaCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.attributeAuthority">Attribute Authority</span></dt>
+                <dd>
+                    <div *ngIf="attributeDefinition.attributeAuthority">
+                        <a [routerLink]="['/attribute-authority-definition', attributeDefinition.attributeAuthority?.id, 'view']">{{ attributeDefinition.attributeAuthority?.code }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/attribute-definition', attributeDefinition.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

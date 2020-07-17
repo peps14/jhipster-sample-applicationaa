@@ -1,0 +1,35 @@
+{
+  "jhipsterSampleApplicationaaApp": {
+    "attributeAuthorityDefinition": {
+      "home": {
+        "title": "Attribute Authority Definitions",
+        "createLabel": "Create a new Attribute Authority Definition",
+        "createOrEditLabel": "Create or edit a Attribute Authority Definition",
+        "notFound": "No Attribute Authority Definitions found"
+      },
+      "created": "A new Attribute Authority Definition is created with identifier {{ param }}",
+      "updated": "A Attribute Authority Definition is updated with identifier {{ param }}",
+      "deleted": "A Attribute Authority Definition is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Attribute Authority Definition {{ id }}?"
+      },
+      "detail": {
+        "title": "Attribute Authority Definition"
+      },
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "enabled": "Enabled",
+      "spidLevel": "Spid Level",
+      "attributesUrl": "Attributes Url",
+      "consentRequired": "Consent Required",
+      "consentUrl": "Consent Url",
+      "checkConsentUrl": "Check Consent Url",
+      "errorRedirectUrl": "Error Redirect Url",
+      "spidSchemaVersion": "Spid Schema Version",
+      "apiVersion": "Api Version",
+      "testUrl": "Test Url",
+      "attributes": "Attributes"
+    }
+  }
+}

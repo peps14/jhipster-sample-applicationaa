@@ -1,0 +1,85 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.home.title">Attribute Authority Definitions</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-attribute-authority-definition" [routerLink]="['/attribute-authority-definition/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.home.createLabel">
+            Create a new Attribute Authority Definition
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="attributeAuthorityDefinitions?.length === 0">
+        <span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.home.notFound">No attributeAuthorityDefinitions found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="attributeAuthorityDefinitions && attributeAuthorityDefinitions.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.code">Code</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.description">Description</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.enabled">Enabled</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.spidLevel">Spid Level</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.attributesUrl">Attributes Url</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.consentRequired">Consent Required</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.consentUrl">Consent Url</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.checkConsentUrl">Check Consent Url</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.errorRedirectUrl">Error Redirect Url</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.spidSchemaVersion">Spid Schema Version</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.apiVersion">Api Version</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.attributeAuthorityDefinition.testUrl">Test Url</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let attributeAuthorityDefinition of attributeAuthorityDefinitions ;trackBy: trackId">
+                    <td><a [routerLink]="['/attribute-authority-definition', attributeAuthorityDefinition.id, 'view']">{{ attributeAuthorityDefinition.id }}</a></td>
+                    <td>{{ attributeAuthorityDefinition.code }}</td>
+                    <td>{{ attributeAuthorityDefinition.name }}</td>
+                    <td>{{ attributeAuthorityDefinition.description }}</td>
+                    <td>{{ attributeAuthorityDefinition.enabled }}</td>
+                    <td>{{ attributeAuthorityDefinition.spidLevel }}</td>
+                    <td>{{ attributeAuthorityDefinition.attributesUrl }}</td>
+                    <td>{{ attributeAuthorityDefinition.consentRequired }}</td>
+                    <td>{{ attributeAuthorityDefinition.consentUrl }}</td>
+                    <td>{{ attributeAuthorityDefinition.checkConsentUrl }}</td>
+                    <td>{{ attributeAuthorityDefinition.errorRedirectUrl }}</td>
+                    <td>{{ attributeAuthorityDefinition.spidSchemaVersion }}</td>
+                    <td>{{ attributeAuthorityDefinition.apiVersion }}</td>
+                    <td>{{ attributeAuthorityDefinition.testUrl }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/attribute-authority-definition', attributeAuthorityDefinition.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/attribute-authority-definition', attributeAuthorityDefinition.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(attributeAuthorityDefinition)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+{
+  "name": "AttributeDefinition",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publicAvalable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "spidLevel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "multivalue",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "defaultValues",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "consentRequired",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "aaCode",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "attributeAuthorityDefinition",
+      "otherEntityRelationshipName": "attributes",
+      "relationshipValidateRules": "required",
+      "relationshipName": "attributeAuthority",
+      "otherEntityField": "code"
+    }
+  ],
+  "changelogDate": "20200717132904",
+  "entityTableName": "attribute_definition",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
