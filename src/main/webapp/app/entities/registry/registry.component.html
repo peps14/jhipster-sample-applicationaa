@@ -1,0 +1,65 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterSampleApplicationaaApp.registry.home.title">Registries</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-registry" [routerLink]="['/registry/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="jhipsterSampleApplicationaaApp.registry.home.createLabel">
+            Create a new Registry
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="registries?.length === 0">
+        <span jhiTranslate="jhipsterSampleApplicationaaApp.registry.home.notFound">No registries found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="registries && registries.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.registry.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.registry.enabled">Enabled</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.registry.url">Url</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let registry of registries ;trackBy: trackId">
+                    <td><a [routerLink]="['/registry', registry.id, 'view']">{{ registry.id }}</a></td>
+                    <td>{{ registry.name }}</td>
+                    <td>{{ registry.enabled }}</td>
+                    <td>{{ registry.url }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/registry', registry.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/registry', registry.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(registry)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-attribute-definition-heading" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.home.createOrEditLabel">Create or edit a Attribute Definition</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.code" for="field_code">Code</label>
+                    <input type="text" class="form-control" name="code" id="field_code"
+                           formControlName="code"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.publicAvalable" for="field_publicAvalable">Public Avalable</label>
+                    <input type="text" class="form-control" name="publicAvalable" id="field_publicAvalable"
+                           formControlName="publicAvalable"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.spidLevel" for="field_spidLevel">Spid Level</label>
+                    <input type="text" class="form-control" name="spidLevel" id="field_spidLevel"
+                           formControlName="spidLevel"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.multivalue" for="field_multivalue">Multivalue</label>
+                    <input type="checkbox" class="form-control" name="multivalue" id="field_multivalue"
+                           formControlName="multivalue"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.defaultValues" for="field_defaultValues">Default Values</label>
+                    <textarea class="form-control" name="defaultValues" id="field_defaultValues"
+                              formControlName="defaultValues"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.consentRequired" for="field_consentRequired">Consent Required</label>
+                    <input type="checkbox" class="form-control" name="consentRequired" id="field_consentRequired"
+                           formControlName="consentRequired"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.aaCode" for="field_aaCode">Aa Code</label>
+                    <input type="text" class="form-control" name="aaCode" id="field_aaCode"
+                           formControlName="aaCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.attributeDefinition.attributeAuthority" for="field_attributeAuthority">Attribute Authority</label>
+                    <select class="form-control" id="field_attributeAuthority" name="attributeAuthority" formControlName="attributeAuthority">
+                        <option *ngIf="!editForm.get('attributeAuthority')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="attributeAuthorityDefinitionOption.id === editForm.get('attributeAuthority')!.value?.id ? editForm.get('attributeAuthority')!.value : attributeAuthorityDefinitionOption" *ngFor="let attributeAuthorityDefinitionOption of attributeauthoritydefinitions; trackBy: trackById">{{ attributeAuthorityDefinitionOption.code }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('attributeAuthority')!.invalid && (editForm.get('attributeAuthority')!.dirty || editForm.get('attributeAuthority')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('attributeAuthority')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
