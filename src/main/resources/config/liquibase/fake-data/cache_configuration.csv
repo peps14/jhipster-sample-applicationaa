@@ -1,0 +1,11 @@
+id;enabled;force_default;auto_refresh;auto_clean;duration;cache_type
+1;true;false;true;true;88855;CONSENT_GLOBAL
+2;true;true;false;true;23634;CONSENT_GLOBAL
+3;true;true;true;true;74429;CONSENT_GLOBAL
+4;true;false;true;true;71038;ATTRIBUTE_GLOBAL
+5;false;true;false;false;40726;CONSENT_GLOBAL
+6;false;false;true;true;16747;CONSENT_GLOBAL
+7;false;false;false;false;58652;ATTRIBUTE_GLOBAL
+8;true;false;false;false;53638;CONSENT_GLOBAL
+9;false;false;false;false;60807;CONSENT_GLOBAL
+10;false;true;false;false;42926;ATTRIBUTE_GLOBAL

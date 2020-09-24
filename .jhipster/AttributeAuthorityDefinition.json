@@ -1,0 +1,76 @@
+{
+  "name": "AttributeAuthorityDefinition",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "enabled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "spidLevel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attributesUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "consentRequired",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "consentUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "checkConsentUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "errorRedirectUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "spidSchemaVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apiVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "testUrl",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "attributeDefinition",
+      "otherEntityRelationshipName": "attributeAuthority",
+      "relationshipName": "attributes"
+    }
+  ],
+  "changelogDate": "20200924101522",
+  "entityTableName": "attribute_authority_definition",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

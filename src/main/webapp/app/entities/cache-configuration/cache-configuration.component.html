@@ -1,0 +1,71 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.home.title">Cache Configurations</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-cache-configuration" [routerLink]="['/cache-configuration/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.home.createLabel">
+            Create a new Cache Configuration
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="cacheConfigurations?.length === 0">
+        <span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.home.notFound">No cacheConfigurations found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="cacheConfigurations && cacheConfigurations.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.enabled">Enabled</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.forceDefault">Force Default</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoRefresh">Auto Refresh</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoClean">Auto Clean</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.duration">Duration</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.cacheType">Cache Type</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cacheConfiguration of cacheConfigurations ;trackBy: trackId">
+                    <td><a [routerLink]="['/cache-configuration', cacheConfiguration.id, 'view']">{{ cacheConfiguration.id }}</a></td>
+                    <td>{{ cacheConfiguration.enabled }}</td>
+                    <td>{{ cacheConfiguration.forceDefault }}</td>
+                    <td>{{ cacheConfiguration.autoRefresh }}</td>
+                    <td>{{ cacheConfiguration.autoClean }}</td>
+                    <td>{{ cacheConfiguration.duration }}</td>
+                    <td jhiTranslate="{{ 'jhipsterSampleApplicationaaApp.CacheType.' + cacheConfiguration.cacheType }}">{{ cacheConfiguration.cacheType }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/cache-configuration', cacheConfiguration.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/cache-configuration', cacheConfiguration.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(cacheConfiguration)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

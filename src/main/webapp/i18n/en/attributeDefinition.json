@@ -1,0 +1,31 @@
+{
+  "jhipsterSampleApplicationaaApp": {
+    "attributeDefinition": {
+      "home": {
+        "title": "Attribute Definitions",
+        "createLabel": "Create a new Attribute Definition",
+        "createOrEditLabel": "Create or edit a Attribute Definition",
+        "notFound": "No Attribute Definitions found"
+      },
+      "created": "A new Attribute Definition is created with identifier {{ param }}",
+      "updated": "A Attribute Definition is updated with identifier {{ param }}",
+      "deleted": "A Attribute Definition is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Attribute Definition {{ id }}?"
+      },
+      "detail": {
+        "title": "Attribute Definition"
+      },
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "publicAvalable": "Public Avalable",
+      "spidLevel": "Spid Level",
+      "multivalue": "Multivalue",
+      "defaultValues": "Default Values",
+      "consentRequired": "Consent Required",
+      "aaCode": "Aa Code",
+      "attributeAuthority": "Attribute Authority"
+    }
+  }
+}

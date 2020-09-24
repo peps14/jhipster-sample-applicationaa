@@ -1,0 +1,5 @@
+export const enum CacheType {
+  ATTRIBUTE_GLOBAL = 'ATTRIBUTE_GLOBAL',
+
+  CONSENT_GLOBAL = 'CONSENT_GLOBAL',
+}
