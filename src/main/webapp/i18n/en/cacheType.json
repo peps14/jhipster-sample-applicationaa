@@ -1,0 +1,9 @@
+{
+  "jhipsterSampleApplicationaaApp": {
+    "CacheType": {
+      "null": "",
+      "ATTRIBUTE_GLOBAL": "ATTRIBUTE_GLOBAL",
+      "CONSENT_GLOBAL": "CONSENT_GLOBAL"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "CacheConfiguration",
+  "fields": [
+    {
+      "fieldName": "enabled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "forceDefault",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "autoRefresh",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "autoClean",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cacheType",
+      "fieldType": "CacheType",
+      "fieldValues": "ATTRIBUTE_GLOBAL,CONSENT_GLOBAL"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200924101722",
+  "entityTableName": "cache_configuration",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

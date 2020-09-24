@@ -1,0 +1,56 @@
+
+entity Registry {
+name String,
+enabled Boolean,
+url String,
+}
+
+entity AttributeAuthorityDefinition {
+code String,
+name String,
+description String,
+enabled Boolean,
+spidLevel String,
+attributesUrl String,
+consentRequired Boolean,
+consentUrl String,
+checkConsentUrl String,
+errorRedirectUrl String,
+spidSchemaVersion String,
+apiVersion String,
+testUrl String
+}
+
+entity AttributeDefinition {
+code String,
+name String,
+description String,
+publicAvalable String,
+spidLevel String,
+multivalue Boolean,
+defaultValues TextBlob,
+consentRequired Boolean
+aaCode String,
+}
+
+entity CacheConfiguration {
+enabled Boolean,
+forceDefault Boolean,
+autoRefresh Boolean,
+autoClean Boolean,
+duration Long,
+cacheType CacheType
+}
+
+enum CacheType {
+	ATTRIBUTE_GLOBAL, CONSENT_GLOBAL
+}
+
+
+
+relationship OneToMany {
+    AttributeAuthorityDefinition{attributes} to AttributeDefinition{attributeAuthority(code) required},
+  
+}
+service all with serviceClass
+

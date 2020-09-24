@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cacheConfiguration">
+            <h2><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.detail.title">Cache Configuration</span> {{ cacheConfiguration.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.enabled">Enabled</span></dt>
+                <dd>
+                    <span>{{ cacheConfiguration.enabled }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.forceDefault">Force Default</span></dt>
+                <dd>
+                    <span>{{ cacheConfiguration.forceDefault }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoRefresh">Auto Refresh</span></dt>
+                <dd>
+                    <span>{{ cacheConfiguration.autoRefresh }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoClean">Auto Clean</span></dt>
+                <dd>
+                    <span>{{ cacheConfiguration.autoClean }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.duration">Duration</span></dt>
+                <dd>
+                    <span>{{ cacheConfiguration.duration }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.cacheType">Cache Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'jhipsterSampleApplicationaaApp.CacheType.' + cacheConfiguration.cacheType }}">{{ cacheConfiguration.cacheType }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cache-configuration', cacheConfiguration.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-cache-configuration-heading" jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.home.createOrEditLabel">Create or edit a Cache Configuration</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.enabled" for="field_enabled">Enabled</label>
+                    <input type="checkbox" class="form-control" name="enabled" id="field_enabled"
+                           formControlName="enabled"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.forceDefault" for="field_forceDefault">Force Default</label>
+                    <input type="checkbox" class="form-control" name="forceDefault" id="field_forceDefault"
+                           formControlName="forceDefault"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoRefresh" for="field_autoRefresh">Auto Refresh</label>
+                    <input type="checkbox" class="form-control" name="autoRefresh" id="field_autoRefresh"
+                           formControlName="autoRefresh"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoClean" for="field_autoClean">Auto Clean</label>
+                    <input type="checkbox" class="form-control" name="autoClean" id="field_autoClean"
+                           formControlName="autoClean"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.duration" for="field_duration">Duration</label>
+                    <input type="number" class="form-control" name="duration" id="field_duration"
+                           formControlName="duration"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.cacheType" for="field_cacheType">Cache Type</label>
+                    <select class="form-control" name="cacheType" formControlName="cacheType" id="field_cacheType">
+                        <option value="ATTRIBUTE_GLOBAL">{{ 'jhipsterSampleApplicationaaApp.CacheType.ATTRIBUTE_GLOBAL' | translate }}</option>
+                        <option value="CONSENT_GLOBAL">{{ 'jhipsterSampleApplicationaaApp.CacheType.CONSENT_GLOBAL' | translate }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

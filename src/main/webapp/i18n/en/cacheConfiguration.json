@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplicationaaApp": {
+    "cacheConfiguration": {
+      "home": {
+        "title": "Cache Configurations",
+        "createLabel": "Create a new Cache Configuration",
+        "createOrEditLabel": "Create or edit a Cache Configuration",
+        "notFound": "No Cache Configurations found"
+      },
+      "created": "A new Cache Configuration is created with identifier {{ param }}",
+      "updated": "A Cache Configuration is updated with identifier {{ param }}",
+      "deleted": "A Cache Configuration is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cache Configuration {{ id }}?"
+      },
+      "detail": {
+        "title": "Cache Configuration"
+      },
+      "enabled": "Enabled",
+      "forceDefault": "Force Default",
+      "autoRefresh": "Auto Refresh",
+      "autoClean": "Auto Clean",
+      "duration": "Duration",
+      "cacheType": "Cache Type"
+    }
+  }
+}
