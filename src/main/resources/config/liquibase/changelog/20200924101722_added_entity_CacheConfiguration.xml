@@ -37,6 +37,9 @@
             <column name="auto_clean" type="boolean">
                 <constraints nullable="true" />
             </column>
+            <column name="auto_clean_cron_expression" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="duration" type="bigint">
                 <constraints nullable="true" />
             </column>
@@ -73,6 +76,7 @@
             <column name="autho_refresh_batch_size" type="numeric"/>
             <column name="autho_refresh_batch_interval" type="numeric"/>
             <column name="auto_clean" type="boolean"/>
+            <column name="auto_clean_cron_expression" type="string"/>
             <column name="duration" type="numeric"/>
             <column name="cache_type" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->

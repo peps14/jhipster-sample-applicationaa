@@ -44,6 +44,9 @@ public class CacheConfiguration implements Serializable {
     @Column(name = "auto_clean")
     private Boolean autoClean;
 
+    @Column(name = "auto_clean_cron_expression")
+    private String autoCleanCronExpression;
+
     @Column(name = "duration")
     private Long duration;
 
@@ -151,6 +154,19 @@ public class CacheConfiguration implements Serializable {
         this.autoClean = autoClean;
     }
 
+    public String getAutoCleanCronExpression() {
+        return autoCleanCronExpression;
+    }
+
+    public CacheConfiguration autoCleanCronExpression(String autoCleanCronExpression) {
+        this.autoCleanCronExpression = autoCleanCronExpression;
+        return this;
+    }
+
+    public void setAutoCleanCronExpression(String autoCleanCronExpression) {
+        this.autoCleanCronExpression = autoCleanCronExpression;
+    }
+
     public Long getDuration() {
         return duration;
     }
@@ -206,6 +222,7 @@ public class CacheConfiguration implements Serializable {
             ", authoRefreshBatchSize=" + getAuthoRefreshBatchSize() +
             ", authoRefreshBatchInterval=" + getAuthoRefreshBatchInterval() +
             ", autoClean='" + isAutoClean() + "'" +
+            ", autoCleanCronExpression='" + getAutoCleanCronExpression() + "'" +
             ", duration=" + getDuration() +
             ", cacheType='" + getCacheType() + "'" +
             "}";

@@ -23,6 +23,7 @@
       "authoRefreshBatchSize": "Autho Refresh Batch Size",
       "authoRefreshBatchInterval": "Autho Refresh Batch Interval",
       "autoClean": "Auto Clean",
+      "autoCleanCronExpression": "Auto Clean Cron Expression",
       "duration": "Duration",
       "cacheType": "Cache Type"
     }

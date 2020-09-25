@@ -30,6 +30,10 @@
       "fieldType": "Boolean"
     },
     {
+      "fieldName": "autoCleanCronExpression",
+      "fieldType": "String"
+    },
+    {
       "fieldName": "duration",
       "fieldType": "Long"
     },

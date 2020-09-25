@@ -30,6 +30,7 @@
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.authoRefreshBatchSize">Autho Refresh Batch Size</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.authoRefreshBatchInterval">Autho Refresh Batch Interval</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoClean">Auto Clean</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoCleanCronExpression">Auto Clean Cron Expression</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.duration">Duration</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.cacheType">Cache Type</span></th>
                     <th scope="col"></th>
@@ -45,6 +46,7 @@
                     <td>{{ cacheConfiguration.authoRefreshBatchSize }}</td>
                     <td>{{ cacheConfiguration.authoRefreshBatchInterval }}</td>
                     <td>{{ cacheConfiguration.autoClean }}</td>
+                    <td>{{ cacheConfiguration.autoCleanCronExpression }}</td>
                     <td>{{ cacheConfiguration.duration }}</td>
                     <td jhiTranslate="{{ 'jhipsterSampleApplicationaaApp.CacheType.' + cacheConfiguration.cacheType }}">{{ cacheConfiguration.cacheType }}</td>
                     <td class="text-right">

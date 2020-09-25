@@ -24,6 +24,7 @@ export class CacheConfigurationUpdateComponent implements OnInit {
     authoRefreshBatchSize: [],
     authoRefreshBatchInterval: [],
     autoClean: [],
+    autoCleanCronExpression: [],
     duration: [],
     cacheType: [],
   });
@@ -50,6 +51,7 @@ export class CacheConfigurationUpdateComponent implements OnInit {
       authoRefreshBatchSize: cacheConfiguration.authoRefreshBatchSize,
       authoRefreshBatchInterval: cacheConfiguration.authoRefreshBatchInterval,
       autoClean: cacheConfiguration.autoClean,
+      autoCleanCronExpression: cacheConfiguration.autoCleanCronExpression,
       duration: cacheConfiguration.duration,
       cacheType: cacheConfiguration.cacheType,
     });
@@ -80,6 +82,7 @@ export class CacheConfigurationUpdateComponent implements OnInit {
       authoRefreshBatchSize: this.editForm.get(['authoRefreshBatchSize'])!.value,
       authoRefreshBatchInterval: this.editForm.get(['authoRefreshBatchInterval'])!.value,
       autoClean: this.editForm.get(['autoClean'])!.value,
+      autoCleanCronExpression: this.editForm.get(['autoCleanCronExpression'])!.value,
       duration: this.editForm.get(['duration'])!.value,
       cacheType: this.editForm.get(['cacheType'])!.value,
     };
