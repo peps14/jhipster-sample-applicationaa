@@ -40,6 +40,15 @@ public class CacheConfigurationResourceIT {
     private static final Boolean DEFAULT_AUTO_REFRESH = false;
     private static final Boolean UPDATED_AUTO_REFRESH = true;
 
+    private static final String DEFAULT_AUTHO_REFRESH_CRON_EXPRESSION = "AAAAAAAAAA";
+    private static final String UPDATED_AUTHO_REFRESH_CRON_EXPRESSION = "BBBBBBBBBB";
+
+    private static final Integer DEFAULT_AUTHO_REFRESH_BATCH_SIZE = 1;
+    private static final Integer UPDATED_AUTHO_REFRESH_BATCH_SIZE = 2;
+
+    private static final Long DEFAULT_AUTHO_REFRESH_BATCH_INTERVAL = 1L;
+    private static final Long UPDATED_AUTHO_REFRESH_BATCH_INTERVAL = 2L;
+
     private static final Boolean DEFAULT_AUTO_CLEAN = false;
     private static final Boolean UPDATED_AUTO_CLEAN = true;
 
@@ -74,6 +83,9 @@ public class CacheConfigurationResourceIT {
             .enabled(DEFAULT_ENABLED)
             .forceDefault(DEFAULT_FORCE_DEFAULT)
             .autoRefresh(DEFAULT_AUTO_REFRESH)
+            .authoRefreshCronExpression(DEFAULT_AUTHO_REFRESH_CRON_EXPRESSION)
+            .authoRefreshBatchSize(DEFAULT_AUTHO_REFRESH_BATCH_SIZE)
+            .authoRefreshBatchInterval(DEFAULT_AUTHO_REFRESH_BATCH_INTERVAL)
             .autoClean(DEFAULT_AUTO_CLEAN)
             .duration(DEFAULT_DURATION)
             .cacheType(DEFAULT_CACHE_TYPE);
@@ -90,6 +102,9 @@ public class CacheConfigurationResourceIT {
             .enabled(UPDATED_ENABLED)
             .forceDefault(UPDATED_FORCE_DEFAULT)
             .autoRefresh(UPDATED_AUTO_REFRESH)
+            .authoRefreshCronExpression(UPDATED_AUTHO_REFRESH_CRON_EXPRESSION)
+            .authoRefreshBatchSize(UPDATED_AUTHO_REFRESH_BATCH_SIZE)
+            .authoRefreshBatchInterval(UPDATED_AUTHO_REFRESH_BATCH_INTERVAL)
             .autoClean(UPDATED_AUTO_CLEAN)
             .duration(UPDATED_DURATION)
             .cacheType(UPDATED_CACHE_TYPE);
@@ -118,6 +133,9 @@ public class CacheConfigurationResourceIT {
         assertThat(testCacheConfiguration.isEnabled()).isEqualTo(DEFAULT_ENABLED);
         assertThat(testCacheConfiguration.isForceDefault()).isEqualTo(DEFAULT_FORCE_DEFAULT);
         assertThat(testCacheConfiguration.isAutoRefresh()).isEqualTo(DEFAULT_AUTO_REFRESH);
+        assertThat(testCacheConfiguration.getAuthoRefreshCronExpression()).isEqualTo(DEFAULT_AUTHO_REFRESH_CRON_EXPRESSION);
+        assertThat(testCacheConfiguration.getAuthoRefreshBatchSize()).isEqualTo(DEFAULT_AUTHO_REFRESH_BATCH_SIZE);
+        assertThat(testCacheConfiguration.getAuthoRefreshBatchInterval()).isEqualTo(DEFAULT_AUTHO_REFRESH_BATCH_INTERVAL);
         assertThat(testCacheConfiguration.isAutoClean()).isEqualTo(DEFAULT_AUTO_CLEAN);
         assertThat(testCacheConfiguration.getDuration()).isEqualTo(DEFAULT_DURATION);
         assertThat(testCacheConfiguration.getCacheType()).isEqualTo(DEFAULT_CACHE_TYPE);
@@ -157,6 +175,9 @@ public class CacheConfigurationResourceIT {
             .andExpect(jsonPath("$.[*].enabled").value(hasItem(DEFAULT_ENABLED.booleanValue())))
             .andExpect(jsonPath("$.[*].forceDefault").value(hasItem(DEFAULT_FORCE_DEFAULT.booleanValue())))
             .andExpect(jsonPath("$.[*].autoRefresh").value(hasItem(DEFAULT_AUTO_REFRESH.booleanValue())))
+            .andExpect(jsonPath("$.[*].authoRefreshCronExpression").value(hasItem(DEFAULT_AUTHO_REFRESH_CRON_EXPRESSION)))
+            .andExpect(jsonPath("$.[*].authoRefreshBatchSize").value(hasItem(DEFAULT_AUTHO_REFRESH_BATCH_SIZE)))
+            .andExpect(jsonPath("$.[*].authoRefreshBatchInterval").value(hasItem(DEFAULT_AUTHO_REFRESH_BATCH_INTERVAL.intValue())))
             .andExpect(jsonPath("$.[*].autoClean").value(hasItem(DEFAULT_AUTO_CLEAN.booleanValue())))
             .andExpect(jsonPath("$.[*].duration").value(hasItem(DEFAULT_DURATION.intValue())))
             .andExpect(jsonPath("$.[*].cacheType").value(hasItem(DEFAULT_CACHE_TYPE.toString())));
@@ -176,6 +197,9 @@ public class CacheConfigurationResourceIT {
             .andExpect(jsonPath("$.enabled").value(DEFAULT_ENABLED.booleanValue()))
             .andExpect(jsonPath("$.forceDefault").value(DEFAULT_FORCE_DEFAULT.booleanValue()))
             .andExpect(jsonPath("$.autoRefresh").value(DEFAULT_AUTO_REFRESH.booleanValue()))
+            .andExpect(jsonPath("$.authoRefreshCronExpression").value(DEFAULT_AUTHO_REFRESH_CRON_EXPRESSION))
+            .andExpect(jsonPath("$.authoRefreshBatchSize").value(DEFAULT_AUTHO_REFRESH_BATCH_SIZE))
+            .andExpect(jsonPath("$.authoRefreshBatchInterval").value(DEFAULT_AUTHO_REFRESH_BATCH_INTERVAL.intValue()))
             .andExpect(jsonPath("$.autoClean").value(DEFAULT_AUTO_CLEAN.booleanValue()))
             .andExpect(jsonPath("$.duration").value(DEFAULT_DURATION.intValue()))
             .andExpect(jsonPath("$.cacheType").value(DEFAULT_CACHE_TYPE.toString()));
@@ -204,6 +228,9 @@ public class CacheConfigurationResourceIT {
             .enabled(UPDATED_ENABLED)
             .forceDefault(UPDATED_FORCE_DEFAULT)
             .autoRefresh(UPDATED_AUTO_REFRESH)
+            .authoRefreshCronExpression(UPDATED_AUTHO_REFRESH_CRON_EXPRESSION)
+            .authoRefreshBatchSize(UPDATED_AUTHO_REFRESH_BATCH_SIZE)
+            .authoRefreshBatchInterval(UPDATED_AUTHO_REFRESH_BATCH_INTERVAL)
             .autoClean(UPDATED_AUTO_CLEAN)
             .duration(UPDATED_DURATION)
             .cacheType(UPDATED_CACHE_TYPE);
@@ -220,6 +247,9 @@ public class CacheConfigurationResourceIT {
         assertThat(testCacheConfiguration.isEnabled()).isEqualTo(UPDATED_ENABLED);
         assertThat(testCacheConfiguration.isForceDefault()).isEqualTo(UPDATED_FORCE_DEFAULT);
         assertThat(testCacheConfiguration.isAutoRefresh()).isEqualTo(UPDATED_AUTO_REFRESH);
+        assertThat(testCacheConfiguration.getAuthoRefreshCronExpression()).isEqualTo(UPDATED_AUTHO_REFRESH_CRON_EXPRESSION);
+        assertThat(testCacheConfiguration.getAuthoRefreshBatchSize()).isEqualTo(UPDATED_AUTHO_REFRESH_BATCH_SIZE);
+        assertThat(testCacheConfiguration.getAuthoRefreshBatchInterval()).isEqualTo(UPDATED_AUTHO_REFRESH_BATCH_INTERVAL);
         assertThat(testCacheConfiguration.isAutoClean()).isEqualTo(UPDATED_AUTO_CLEAN);
         assertThat(testCacheConfiguration.getDuration()).isEqualTo(UPDATED_DURATION);
         assertThat(testCacheConfiguration.getCacheType()).isEqualTo(UPDATED_CACHE_TYPE);

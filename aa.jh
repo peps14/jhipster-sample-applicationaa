@@ -37,7 +37,11 @@ entity CacheConfiguration {
 enabled Boolean,
 forceDefault Boolean,
 autoRefresh Boolean,
+authoRefreshCronExpression String,
+authoRefreshBatchSize Integer,
+authoRefreshBatchInterval Long,
 autoClean Boolean,
+authoRefreshCronExpression String,
 duration Long,
 cacheType CacheType
 }

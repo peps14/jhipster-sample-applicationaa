@@ -32,6 +32,15 @@ public class CacheConfiguration implements Serializable {
     @Column(name = "auto_refresh")
     private Boolean autoRefresh;
 
+    @Column(name = "autho_refresh_cron_expression")
+    private String authoRefreshCronExpression;
+
+    @Column(name = "autho_refresh_batch_size")
+    private Integer authoRefreshBatchSize;
+
+    @Column(name = "autho_refresh_batch_interval")
+    private Long authoRefreshBatchInterval;
+
     @Column(name = "auto_clean")
     private Boolean autoClean;
 
@@ -88,6 +97,45 @@ public class CacheConfiguration implements Serializable {
 
     public void setAutoRefresh(Boolean autoRefresh) {
         this.autoRefresh = autoRefresh;
+    }
+
+    public String getAuthoRefreshCronExpression() {
+        return authoRefreshCronExpression;
+    }
+
+    public CacheConfiguration authoRefreshCronExpression(String authoRefreshCronExpression) {
+        this.authoRefreshCronExpression = authoRefreshCronExpression;
+        return this;
+    }
+
+    public void setAuthoRefreshCronExpression(String authoRefreshCronExpression) {
+        this.authoRefreshCronExpression = authoRefreshCronExpression;
+    }
+
+    public Integer getAuthoRefreshBatchSize() {
+        return authoRefreshBatchSize;
+    }
+
+    public CacheConfiguration authoRefreshBatchSize(Integer authoRefreshBatchSize) {
+        this.authoRefreshBatchSize = authoRefreshBatchSize;
+        return this;
+    }
+
+    public void setAuthoRefreshBatchSize(Integer authoRefreshBatchSize) {
+        this.authoRefreshBatchSize = authoRefreshBatchSize;
+    }
+
+    public Long getAuthoRefreshBatchInterval() {
+        return authoRefreshBatchInterval;
+    }
+
+    public CacheConfiguration authoRefreshBatchInterval(Long authoRefreshBatchInterval) {
+        this.authoRefreshBatchInterval = authoRefreshBatchInterval;
+        return this;
+    }
+
+    public void setAuthoRefreshBatchInterval(Long authoRefreshBatchInterval) {
+        this.authoRefreshBatchInterval = authoRefreshBatchInterval;
     }
 
     public Boolean isAutoClean() {
@@ -154,6 +202,9 @@ public class CacheConfiguration implements Serializable {
             ", enabled='" + isEnabled() + "'" +
             ", forceDefault='" + isForceDefault() + "'" +
             ", autoRefresh='" + isAutoRefresh() + "'" +
+            ", authoRefreshCronExpression='" + getAuthoRefreshCronExpression() + "'" +
+            ", authoRefreshBatchSize=" + getAuthoRefreshBatchSize() +
+            ", authoRefreshBatchInterval=" + getAuthoRefreshBatchInterval() +
             ", autoClean='" + isAutoClean() + "'" +
             ", duration=" + getDuration() +
             ", cacheType='" + getCacheType() + "'" +

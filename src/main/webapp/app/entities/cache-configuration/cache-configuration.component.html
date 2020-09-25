@@ -26,6 +26,9 @@
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.enabled">Enabled</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.forceDefault">Force Default</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoRefresh">Auto Refresh</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.authoRefreshCronExpression">Autho Refresh Cron Expression</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.authoRefreshBatchSize">Autho Refresh Batch Size</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.authoRefreshBatchInterval">Autho Refresh Batch Interval</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.autoClean">Auto Clean</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.duration">Duration</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterSampleApplicationaaApp.cacheConfiguration.cacheType">Cache Type</span></th>
@@ -38,6 +41,9 @@
                     <td>{{ cacheConfiguration.enabled }}</td>
                     <td>{{ cacheConfiguration.forceDefault }}</td>
                     <td>{{ cacheConfiguration.autoRefresh }}</td>
+                    <td>{{ cacheConfiguration.authoRefreshCronExpression }}</td>
+                    <td>{{ cacheConfiguration.authoRefreshBatchSize }}</td>
+                    <td>{{ cacheConfiguration.authoRefreshBatchInterval }}</td>
                     <td>{{ cacheConfiguration.autoClean }}</td>
                     <td>{{ cacheConfiguration.duration }}</td>
                     <td jhiTranslate="{{ 'jhipsterSampleApplicationaaApp.CacheType.' + cacheConfiguration.cacheType }}">{{ cacheConfiguration.cacheType }}</td>

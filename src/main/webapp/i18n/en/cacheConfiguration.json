@@ -19,6 +19,9 @@
       "enabled": "Enabled",
       "forceDefault": "Force Default",
       "autoRefresh": "Auto Refresh",
+      "authoRefreshCronExpression": "Autho Refresh Cron Expression",
+      "authoRefreshBatchSize": "Autho Refresh Batch Size",
+      "authoRefreshBatchInterval": "Autho Refresh Batch Interval",
       "autoClean": "Auto Clean",
       "duration": "Duration",
       "cacheType": "Cache Type"
