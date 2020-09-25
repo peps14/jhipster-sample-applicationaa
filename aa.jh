@@ -41,7 +41,7 @@ authoRefreshCronExpression String,
 authoRefreshBatchSize Integer,
 authoRefreshBatchInterval Long,
 autoClean Boolean,
-authoRefreshCronExpression String,
+autoCleanCronExpression String,
 duration Long,
 cacheType CacheType
 }
