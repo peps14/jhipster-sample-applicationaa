@@ -1,11 +1,11 @@
-id;enabled;force_default;auto_refresh;auto_clean;duration;cache_type
-1;true;false;true;true;88855;CONSENT_GLOBAL
-2;true;true;false;true;23634;CONSENT_GLOBAL
-3;true;true;true;true;74429;CONSENT_GLOBAL
-4;true;false;true;true;71038;ATTRIBUTE_GLOBAL
-5;false;true;false;false;40726;CONSENT_GLOBAL
-6;false;false;true;true;16747;CONSENT_GLOBAL
-7;false;false;false;false;58652;ATTRIBUTE_GLOBAL
-8;true;false;false;false;53638;CONSENT_GLOBAL
-9;false;false;false;false;60807;CONSENT_GLOBAL
-10;false;true;false;false;42926;ATTRIBUTE_GLOBAL
+id;enabled;force_default;auto_refresh;autho_refresh_cron_expression;autho_refresh_batch_size;autho_refresh_batch_interval;auto_clean;duration;cache_type
+1;true;false;true;CSS hard drive;95375;94657;true;20267;CONSENT_GLOBAL
+2;true;false;false;Facilitator JBOD calculate;13502;27243;true;48864;CONSENT_GLOBAL
+3;false;true;false;Ergonomic Granite Fish Intuitive;40726;15047;true;35428;ATTRIBUTE_GLOBAL
+4;true;true;true;Ball fault-tolerant Nebraska;46345;18973;true;52350;CONSENT_GLOBAL
+5;true;true;false;framework benchmark purple;31982;26185;true;41560;ATTRIBUTE_GLOBAL
+6;true;false;true;killer;51704;64089;true;45471;ATTRIBUTE_GLOBAL
+7;true;true;false;European Unit of Account 17(E.U.A.-17) architect;92701;48401;true;41512;ATTRIBUTE_GLOBAL
+8;true;true;true;navigate;50541;5641;true;55893;ATTRIBUTE_GLOBAL
+9;false;false;true;bypass;40953;20846;true;19044;CONSENT_GLOBAL
+10;true;false;false;Metrics Borders Alaska;71947;28138;false;5722;CONSENT_GLOBAL
