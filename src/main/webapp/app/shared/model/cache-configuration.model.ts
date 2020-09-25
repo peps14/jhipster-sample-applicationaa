@@ -9,6 +9,7 @@ export interface ICacheConfiguration {
   authoRefreshBatchSize?: number;
   authoRefreshBatchInterval?: number;
   autoClean?: boolean;
+  autoCleanCronExpression?: string;
   duration?: number;
   cacheType?: CacheType;
 }
@@ -23,6 +24,7 @@ export class CacheConfiguration implements ICacheConfiguration {
     public authoRefreshBatchSize?: number,
     public authoRefreshBatchInterval?: number,
     public autoClean?: boolean,
+    public autoCleanCronExpression?: string,
     public duration?: number,
     public cacheType?: CacheType
   ) {

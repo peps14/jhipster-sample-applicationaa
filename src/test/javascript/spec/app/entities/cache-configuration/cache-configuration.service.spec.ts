@@ -21,7 +21,7 @@ describe('Service Tests', () => {
       service = injector.get(CacheConfigurationService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new CacheConfiguration(0, false, false, false, 'AAAAAAA', 0, 0, false, 0, CacheType.ATTRIBUTE_GLOBAL);
+      elemDefault = new CacheConfiguration(0, false, false, false, 'AAAAAAA', 0, 0, false, 'AAAAAAA', 0, CacheType.ATTRIBUTE_GLOBAL);
     });
 
     describe('Service methods', () => {
@@ -62,6 +62,7 @@ describe('Service Tests', () => {
             authoRefreshBatchSize: 1,
             authoRefreshBatchInterval: 1,
             autoClean: true,
+            autoCleanCronExpression: 'BBBBBB',
             duration: 1,
             cacheType: 'BBBBBB',
           },
@@ -87,6 +88,7 @@ describe('Service Tests', () => {
             authoRefreshBatchSize: 1,
             authoRefreshBatchInterval: 1,
             autoClean: true,
+            autoCleanCronExpression: 'BBBBBB',
             duration: 1,
             cacheType: 'BBBBBB',
           },
